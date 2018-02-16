@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/com.burlette.emf.countries.model/src-gen" creationIcons="false"
+    editDirectory="/com.burlette.emf.countries.model.edit/src-gen" editorDirectory="/com.burlette.emf.countries.model.editor/src-gen"
+    modelPluginID="com.burlette.emf.countries.model" modelName="Countries" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>countries.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Countries" basePackage="com.burlette.emf.countries.model" disposableProviderFactory="true"
+      ecorePackage="countries.ecore#/">
+    <genClasses ecoreClass="countries.ecore#//Country">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Country/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Country/yearFounded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Country/isPartOfUN"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference countries.ecore#//Country/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference countries.ecore#//Country/president"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//State/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//State/population"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//State/totalArea"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference countries.ecore#//State/county"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference countries.ecore#//State/governor"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//County">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//County/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//County/countyNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//County/largestCity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference countries.ecore#//County/city"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference countries.ecore#//County/commissioner"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//City">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//City/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//City/population"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//City/isStateCapital"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference countries.ecore#//City/mayor"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//Governor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Governor/yearElected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Governor/endOfTermYear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Governor/yearsLivedInState"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//President">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//President/presidentNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//President/eligibleForReelection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//President/secretCodename"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//Commissioner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Commissioner/yearElected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Commissioner/congressionalDistrict"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Commissioner/isIncumbent"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//Mayor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Mayor/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Mayor/timesElected"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Mayor/ageElectedAsMayor"/>
+    </genClasses>
+    <genClasses ecoreClass="countries.ecore#//Politician">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Politician/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Politician/politicalParty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute countries.ecore#//Politician/totalYearsInService"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

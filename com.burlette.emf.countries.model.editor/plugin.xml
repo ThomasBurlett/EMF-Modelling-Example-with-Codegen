@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated countries -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.burlette.emf.countries.model.countries.presentation.CountriesModelWizardID"
+            name="%_UI_CountriesModelWizard_label"
+            class="com.burlette.emf.countries.model.countries.presentation.CountriesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CountriesModelFile.gif">
+         <description>%_UI_CountriesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated countries -->
+      <editor
+            id="com.burlette.emf.countries.model.countries.presentation.CountriesEditorID"
+            name="%_UI_CountriesEditor_label"
+            icon="icons/full/obj16/CountriesModelFile.gif"
+            extensions="countries"
+            class="com.burlette.emf.countries.model.countries.presentation.CountriesEditor"
+            contributorClass="com.burlette.emf.countries.model.countries.presentation.CountriesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
